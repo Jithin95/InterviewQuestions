@@ -12,9 +12,9 @@
     print "list2 = %s" % list2
     print "list3 = %s" % list3
 
-#####list1 = [10, 'a']
-#####list2 = [123]
-#####list3 = [10, 'a']
+#### list1 = [10, 'a']
+#### list2 = [123]
+#### list3 = [10, 'a']
 
 ### What is the output of this code:
 
@@ -23,7 +23,7 @@
 
     print [m(2) for m in multipliers()]
 
-#####[6, 6, 6, 6]
+#### [6, 6, 6, 6]
 
 The reason for this is that Python’s closures are late binding. This means that the values of variables used in closures are looked up at the time the inner function is called. So as a result, when any of the functions returned by multipliers() are called, the value of i is looked up in the surrounding scope at that time. By then, regardless of which of the returned functions is called, the for loop has completed and i is left with its final value of 3.
 
